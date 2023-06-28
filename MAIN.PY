@@ -1,7 +1,6 @@
 import csv
 import pandas as pd
 
-# READ THE CSV
 rows = []
 
 with open("stars.csv",'r') as f:
@@ -21,7 +20,6 @@ solar_radius_list = df["solar_radius"].tolist()
 solar_mass_list.pop(0)
 solar_radius_list.pop(0)
 
-# CONVERT STAR SOLAR MASS INTO SI UNIT OR KILOGRAM
 star_solar_mass_si_unit = []
 
 for data in solar_mass_list:
@@ -31,7 +29,6 @@ for data in solar_mass_list:
 
 print(star_solar_mass_si_unit)
 
-# CONVERT STAR SOLAR RADIUS INTO SI UNIT OR METERS
 star_solar_radius_si_unit = []
 
 for data in solar_radius_list:
@@ -39,8 +36,6 @@ for data in solar_radius_list:
     star_solar_radius_si_unit.append(si_unit)
 
 print(star_solar_radius_si_unit)
-
-# CALCULATE THE GRAVITY OF EACH PLANET
 
 star_masses = star_solar_mass_si_unit
 star_radiuses = star_solar_radius_si_unit
